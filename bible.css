@@ -1,0 +1,83 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Select Container Styles */
+.select-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center; /* added to vertically center select elements */
+}
+
+.select-container select {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* reduced box shadow size */
+}
+
+.select-container select:focus {
+  outline: none; /* added to remove default focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* added to highlight focused select */
+}
+
+/* Style the active book div */
+.book {
+  display: none;
+}
+
+.book.active {
+  display: block;
+}
+
+/* Style the chapter and verse text */
+.book p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+/* Style the dropdown arrow */
+#books::-webkit-scrollbar {
+  display: none;
+}
+
+#books {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: center;
+  padding-right: 30px;
+}
+
+/* Style the dropdown options */
+#books option {
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+#books option:last-child {
+  border-bottom: none;
+}
